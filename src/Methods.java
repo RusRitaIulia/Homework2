@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.lang.*;
@@ -185,6 +186,28 @@ public class Methods {
         System.arraycopy(list_array2, 0, result, firstArraylength, secondArraylength);
         Arrays.sort(result);
         System.out.println("Array obtained from linked List:" + Arrays.toString(result));
+    }
+
+    public void mergeLists(List<Integer> integers, List<Integer> integers2) {
+        int i = integers.size();
+        int j = integers2.size();
+
+        List<Integer> newList = new LinkedList<>();
+        int o = 0;
+        int u = 0;
+        while (newList.size() < i + j) {
+            if (o < i) {
+                newList.add(integers.get(o));
+                o++;
+            }
+            if (u < j) {
+                newList.add(integers2.get(u));
+                u++;
+            }
+        }
+        System.out.println("The First List is: " + integers);
+        System.out.println("The Second List is: " + integers2);
+        System.out.println("The new List is: " + newList);
     }
 
     public void printMap() {

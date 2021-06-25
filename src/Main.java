@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class Main extends Methods {
     public static void main(String[] args) {
         Methods myobject = new Methods();
@@ -25,6 +28,16 @@ public class Main extends Methods {
         myobject.swapTwoAdjacentNodes();
         System.out.println("\n------------------Merge sorted Linked Lists-------------------");
         myobject.mergeSortedLinkedLists();
+        System.out.println("\n------------------Merge sorted Linked Lists - version 2 - ------------------");
+        List<Integer> newList1 = new LinkedList<>();
+        newList1.add(1);
+        newList1.add(2);
+        newList1.add(4);
+        List<Integer> newList2 = new LinkedList<>();
+        newList2.add(1);
+        newList2.add(3);
+        newList2.add(4);
+        myobject.mergeLists(newList1, newList2);
         System.out.println("\n------------------Print Map-------------------");
         myobject.printMap();
     }
